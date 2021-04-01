@@ -9,8 +9,9 @@ import java.util.regex.*;
 public class Reg {
 
 	 static String fName;
-     static String lName;
-     static String email;
+         static String lName;
+         static String email;
+	 static String pass;
 
 static String firstName(){
    Scanner sc1 = new Scanner(System.in);
@@ -33,6 +34,15 @@ static String firstName(){
     	   email = sc3.nextLine();
     	   return email;
     	}
+
+	
+     static String Pasword(){
+   Scanner sc4 = new Scanner(System.in);
+   System.out.println("Enter your pasword contain atleast 8 Char:");
+   pass= sc4.nextLine();
+   return pass;
+}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -42,6 +52,9 @@ static String firstName(){
 	      Boolean lastName = Pattern.matches("^[A-Z]{1}[a-z]{2,}",Reg.lastName());
 
 	      Boolean emailId = Pattern.matches("^[\\w-\\+]+(\\.[\\w]+)@[\\w-]+(\\.[\\w]+)(\\.[a-z]{2,})$",Reg.emailId());
+		
+	       Boolean Pasword = Pattern.matches(".{1,8}",Reg.Pasword());
+
 
 		    
 	      if (firstName == true) {
@@ -61,6 +74,11 @@ static String firstName(){
 	     	           System.out.println("Email id: " + email);
 	     	      }
 	     	 else {System.out.println("INvalid");}      
+			
+                        if (Pasword == true) {
+                           System.out.println("Security Password: " + pass);
+                      }
+                 else {System.out.println("INvalid");}
 
 
 	        }
