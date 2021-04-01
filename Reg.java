@@ -11,6 +11,7 @@ public class Reg {
 	 static String fName;
          static String lName;
          static String email;
+	 static String  pNum;
 	 static String pass;
 
 static String firstName(){
@@ -43,6 +44,16 @@ static String firstName(){
    return pass;
 }
 
+	
+static String phoneNum(){
+   Scanner sc5 = new Scanner(System.in);
+   System.out.println("Enter your Mobile number:");
+   pNum = sc5.nextLine();
+   return pNum;
+}
+
+
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -54,6 +65,8 @@ static String firstName(){
 	      Boolean emailId = Pattern.matches("^[\\w-\\+]+(\\.[\\w]+)@[\\w-]+(\\.[\\w]+)(\\.[a-z]{2,})$",Reg.emailId());
 		
 	       Boolean Pasword = Pattern.matches("^(?=.*[@#$%^&-+=()])(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}",Reg.Pasword());
+
+		    Boolean phoneNum = Pattern.matches("^\\d{10}$",Reg.phoneNum());
 
 
 		    
@@ -79,6 +92,13 @@ static String firstName(){
                            System.out.println("Security Password: " + pass);
                       }
                  else {System.out.println("INvalid");}
+
+		  if (phoneNum == true) {
+                  System.out.println("Mobile number: " + pNum);
+
+              }
+                else {
+                        System.out.println("Invalid");}
 
 
 	        }
