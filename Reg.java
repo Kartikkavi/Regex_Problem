@@ -53,7 +53,7 @@ static String firstName(){
 
 	      Boolean emailId = Pattern.matches("^[\\w-\\+]+(\\.[\\w]+)@[\\w-]+(\\.[\\w]+)(\\.[a-z]{2,})$",Reg.emailId());
 		
-	       Boolean Pasword = Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}",Reg.Pasword());
+	       Boolean Pasword = Pattern.matches("^(?=.*[@#$%^&-+=()])(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}",Reg.Pasword());
 
 
 		    
